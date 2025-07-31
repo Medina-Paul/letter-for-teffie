@@ -3,7 +3,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 50vh;
+    min-height: 80vh;
     margin: 50px;
     font-family: "Permanent Marker", cursive;
     background-color: #fff0f5;
@@ -18,7 +18,7 @@ body {
 .brokenBorder {
     border: 3px dotted rgb(173, 133, 202);
     border-radius: 20px;
-    padding: 5px; 
+    padding: 2px; 
 }
 
 /* Main Card */
@@ -70,6 +70,7 @@ p {
 /* Buttons */
 button {
     border-radius: 50px;
+    margin-top: 5px;
     padding: 5px 10px;
     border: none;
     cursor: pointer;
@@ -79,6 +80,7 @@ button {
     transition: background-color 0.3s ease;
     margin-bottom: 12px;
     font-family: "Permanent Marker", cursive;
+    text-align: center;
     color: rgb(122, 84, 160);
 }
 
@@ -93,71 +95,42 @@ button:hover {
     height: 50px;
 }
 
-/* Fix: Remove orange tap highlight on mobile */
-button, .playIcon {
-    -webkit-tap-highlight-color: transparent; /* iOS & Android */
-    outline: none;
-}
-
-button:focus, .playIcon:focus {
-    outline: none;
-    box-shadow: none;
-}
-
-/* 🎵 Music Player (Fixed Layout) */
+/* Music Card */
 .musicCard {
-    display: flex;
-    align-items: center;
+    display: inline-block;
     background-color: rgb(173, 133, 202);
     width: 85%;
+    height: 93px;
     border-radius: 15px;
-    padding: 10px;
+    padding: 5px;
     margin: 25px 0 15px;
     filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.3));
 }
 
-/* Album Cover */
-.musicCard img {
-    border-radius: 5px;
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    flex-shrink: 0;
+.musicCard button {
+    position: relative;
+    bottom: 90%;
+    left: 39%;
+    width: 30px;
+    height: 28px;
+    padding: 3px 1px;
 }
 
-/* Song Info */
-.musicInfo {
-    flex: 1;
-    margin-left: 12px;
+.musicCard img {
+    border-radius: 3px;
+    margin-left: 22px;
+    position: relative;
+    top: 5%;
+    right: 38%;
+    width: 80px;
 }
 
 .musicTitle {
     color: #fff;
-    font-size: 0.85rem;
-    line-height: 1.2;
-    text-align: left;
-}
-
-/* Play Button */
-.musicCard button {
-    background-color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.musicCard button:hover {
-    background-color: #ffb6c1;
-}
-
-.playIcon {
-    color: rgb(173, 133, 202);
-    font-size: 1rem;
+    position: relative;
+    left: 15%;
+    bottom: 85%;
+    font-size: 10px;
 }
 
 /* Letter Content */
@@ -179,4 +152,13 @@ button:focus, .playIcon:focus {
 .letterContent h3 {
     margin-top: 40px;
     padding: 5px;
+}
+
+/* Play Icon */
+.playIcon {
+    color: rgb(173, 133, 202);
+    position: relative;
+    font-size: 12px;
+    top: -1px;
+    text-align: center;
 }

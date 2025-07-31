@@ -162,3 +162,14 @@ button:hover {
     top: -1px;
     text-align: center;
 }
+
+button, .playIcon {
+    -webkit-tap-highlight-color: transparent; /* iOS & Android */
+    outline: none; /* tanggalin default focus border */
+}
+
+button:focus, .playIcon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
